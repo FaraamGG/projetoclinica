@@ -104,8 +104,10 @@ header { /* Cabeçario */
 }
 
 .slide {
-    height: 400px;
+    height: 600px;
     background-color: var(--p-color);
+    background-image: url(../image/clinico.jpg);
+    background-position: right top;
 }
 
 
