@@ -37,10 +37,34 @@ header .container {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
+
+header .container .symbol {
+  /* Teste */
+  position: absolute;
+  left: 10%;
+  height: 90px;
+  width: 25px;
+  border-right: 100vw solid var(--p-color);
+}
+
+header .container .symbol:after {
+  content: "";
+  height: 200px;
+  margin-left: -50px;
+  margin-top: -100px;
+  width: 200px;
+  background-color: var(--s-color);
+  display: inline-block;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 
 header .container .logo {
   /* logo */
+  z-index: 1;
   margin-left: 50px;
   height: 70px;
   width: 70px;
@@ -50,6 +74,7 @@ header .container .logo {
 
 header .container .nav {
   /* menu de navegação */
+  z-index: 1;
   margin-right: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -77,39 +102,26 @@ header .container .nav .menu-item {
 }
 
 header .container .nav .menu-item a {
-  color: var(--p-color);
+  color: var(--s-color);
   font-size: 1.5em;
 }
 
 header .container .nav .menu-item:hover {
-  -webkit-transition: 0.5s ease-in-out;
-  transition: 0.5s ease-in-out;
-  background-color: var(--p-color);
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  background-color: var(--s-color);
 }
 
 header .container .nav .menu-item:hover a {
-  color: var(--s-color);
+  color: var(--p-color);
 }
 
 header .container .nav .consultar-buttom {
-  background-color: var(--p-color);
-  color: var(--s-color);
+  background-color: var(--s-color);
+  color: var(--p-color);
 }
 
 header .container .nav .consultar-buttom a {
-  color: var(--s-color);
-}
-
-header .container .nav .consultar-buttom:hover {
-  -webkit-transition: 0s ease;
-  transition: 0s ease;
-  background-color: var(--s-color);
-  color: var(--p-color);
-  width: 148px;
-  border: 1px var(--p-color) solid;
-}
-
-header .container .nav .consultar-buttom:hover a {
   color: var(--p-color);
 }
 
@@ -118,5 +130,17 @@ header .container .nav .consultar-buttom:hover a {
   background-color: var(--p-color);
   background-image: url(../image/clinico.jpg);
   background-position: right top;
+  background-attachment: fixed;
+}
+
+.sobre {
+  height: 2000px;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.sobre h2 {
+  font-size: 3em;
+  color: var(--p-color);
 }
 /*# sourceMappingURL=style.css.map */

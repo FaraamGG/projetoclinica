@@ -25,9 +25,30 @@ header { /* Cabeçario */
         display: flex;
         align-items: center;
         justify-content: space-between;
+        position: relative;
+        overflow: hidden;
+
+        .symbol { /* Teste */
+            position: absolute;
+            left: 10%;
+            height: 90px;
+            width: 25px;
+            border-right: 100vw solid var(--p-color);
+
+            &:after{
+                content: "";
+                height: 200px;
+                margin-left:-50px;
+                margin-top:-100px;
+                width: 200px;
+                background-color: var(--s-color);
+                display: inline-block;
+                transform: rotate(-45deg);
+            }
+        }
 
         .logo { /* logo */
-
+            z-index: 1;
             margin-left: 50px;
             height: 70px;
             width: 70px;
@@ -37,7 +58,7 @@ header { /* Cabeçario */
         }
 
         .nav { /* menu de navegação */
-
+            z-index: 1;
             margin-right: 50px;
 
             display: flex;
@@ -56,18 +77,18 @@ header { /* Cabeçario */
                 cursor: pointer;
 
                 a {
-                    color: var(--p-color);
+                    color: var(--s-color);
                     font-size: 1.5em;
                 
 
                 }
 
                 &:hover {
-                    transition: 0.5s ease-in-out;
-                    background-color: var(--p-color);
+                    transition: 0.5s ease;
+                    background-color: var(--s-color);
 
                     a{
-                        color:var(--s-color);
+                        color:var(--p-color);
                     }
                 }
 
@@ -75,24 +96,11 @@ header { /* Cabeçario */
 
             .consultar-buttom {
                 
-                background-color: var(--p-color);
-                color: var(--s-color);
+                background-color: var(--s-color);
+                color: var(--p-color);
                 
                 a{
-                    color:var(--s-color);
-                }
-                
-                &:hover {
-                    
-                    transition: 0s ease;
-                    background-color: var(--s-color);
-                    color: var(--p-color);
-                    width: 148px;
-                    border: 1px var(--p-color) solid;
-
-                    a{
-                        color:var(--p-color);
-                    }
+                    color:var(--p-color);
                 }
 
             }
@@ -108,6 +116,17 @@ header { /* Cabeçario */
     background-color: var(--p-color);
     background-image: url(../image/clinico.jpg);
     background-position: right top;
+    background-attachment: fixed;
+}
+
+.sobre {
+    height: 2000px;
+    text-align: center;
+    margin-top: 40px;
+    h2 {
+        font-size: 3em;
+        color: var(--p-color);
+    }
 }
 
 
