@@ -3,6 +3,7 @@
     --s-color: rgba(255,255,255,1); /*Cor secundária*/
     --t-color: rgba(216,0,39,1); /*Cor terciária*/
     font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
 }
 
 * {
@@ -73,13 +74,14 @@ header { /* Cabeçario */
                 width: 150px;
                 height: 40px;
                 border-radius: 2em;
+                
 
                 cursor: pointer;
 
                 a {
                     color: var(--s-color);
                     font-size: 1.5em;
-                
+                    text-decoration: none;
 
                 }
 
@@ -119,14 +121,63 @@ header { /* Cabeçario */
     background-attachment: fixed;
 }
 
-.sobre {
+#sobre {
     height: 2000px;
     text-align: center;
-    margin-top: 40px;
-    h2 {
-        font-size: 3em;
-        color: var(--p-color);
+    
+   
+    
+    .introducao {
+        
+        width: 100%;
+        margin-bottom: 50px;
+
+        h2 {
+            font-size: 3em;
+            margin: 50px;
+            color: var(--p-color);
+        }
+
+        p {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+    }
+
+    .colunas {
+        width: 90%;
+        display: inline-block;
+        
+
+        .imagem {
+            width: 50%;
+            height: 500px;
+            background-image: url(../image/clinica.jpg);
+            background-position: center;
+        }
+
+        .texto {
+            width: 50%;
+            height: 500px;
+            background-color: var(--s-color);
+
+            p {
+                font-size: 1.4em;
+                
+                padding: 0 20px;
+                text-align: justify;
+                color: var(--p-color);
+            }
+        }
     }
 }
 
 
+.esquerda {
+    float: left;
+}
+
+.direita {
+    float: right;
+}
