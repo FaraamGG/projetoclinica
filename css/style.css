@@ -1,6 +1,6 @@
 @charset "UTF-8";
 :root {
-  --p-color: rgba(162,0,29,1);
+  --p-color: rgb(134, 2, 27);
   /*Cor principal*/
   --s-color: rgba(255,255,255,1);
   /*Cor secundária*/
@@ -213,6 +213,7 @@ header .container .nav .consultar-buttom a {
 }
 
 .loginpop {
+  opacity: 0;
   display: inline-block;
   z-index: 10000;
   position: fixed;
@@ -226,7 +227,6 @@ header .container .nav .consultar-buttom a {
   overflow: hidden;
   -webkit-transition: 1s ease-in-out;
   transition: 1s ease-in-out;
-  opacity: 0;
 }
 
 .loginpop h2 {
@@ -390,8 +390,8 @@ header .container .nav .consultar-buttom a {
 .loginpop #slider {
   z-index: inherit;
   position: fixed;
-  margin-left: 7%;
-  width: 88%;
+  margin-left: 6%;
+  width: 90%;
   height: 30px;
   border-radius: 30px;
   -webkit-user-select: none;
@@ -400,7 +400,6 @@ header .container .nav .consultar-buttom a {
           user-select: none;
   bottom: 20px;
   cursor: pointer;
-  background-color: var(--s-color);
   -webkit-transition: 1s ease-in-out;
   transition: 1s ease-in-out;
 }
