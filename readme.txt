@@ -1,0 +1,1 @@
+O Cadastro não checa se o CPF já existe.
