@@ -141,11 +141,17 @@ header .container .nav .consultar-buttom a {
 }
 
 #sobre .introducao {
-  width: 100%;
-  margin-bottom: 50px;
+  background-color: var(--s-color);
+  border-radius: 20px;
+  width: 50%;
+  -webkit-transform: translate(50%, -50%);
+          transform: translate(50%, -50%);
+  -webkit-box-shadow: 2px 2px 6px 3px rgba(0, 0, 0, 0.12);
+  box-shadow: 2px 2px 6px 3px rgba(0, 0, 0, 0.12);
 }
 
 #sobre .introducao h2 {
+  padding-top: 30px;
   font-size: 3em;
   margin: 50px;
   color: var(--p-color);
@@ -154,18 +160,26 @@ header .container .nav .consultar-buttom a {
 #sobre .introducao p {
   font-size: 1.5em;
   margin-bottom: 10px;
+  padding: 0 20px;
+}
+
+#sobre .introducao p:last-of-type {
+  padding-bottom: 30px;
 }
 
 #sobre .colunas {
+  margin-top: -30px;
   width: 90%;
   display: inline-block;
 }
 
 #sobre .colunas .imagem {
-  width: 50%;
+  width: 45%;
   height: 500px;
   background-image: url(../image/clinica.jpg);
   background-position: center;
+  -webkit-box-shadow: 2px 2px 6px 3px rgba(0, 0, 0, 0.12);
+  box-shadow: 2px 2px 6px 3px rgba(0, 0, 0, 0.12);
 }
 
 #sobre .colunas .texto {
@@ -176,9 +190,26 @@ header .container .nav .consultar-buttom a {
 
 #sobre .colunas .texto p {
   font-size: 1.4em;
-  padding: 0 20px;
+  padding: 10px 20px;
   text-align: justify;
   color: var(--p-color);
+}
+
+#sobre .colunas .texto p::first-letter {
+  font-size: 1.5em;
+  margin-left: 45px;
+  margin-right: 1px;
+}
+
+#sobre .colunas .texto p::before {
+  z-index: 2;
+  content: '';
+  position: absolute;
+  background-image: url(../image/heart.png);
+  background-position: center center;
+  background-size: contain;
+  height: 35px;
+  width: 35px;
 }
 
 .esquerda {
