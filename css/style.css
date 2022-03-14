@@ -212,6 +212,255 @@ header .container .nav .consultar-buttom a {
   width: 35px;
 }
 
+.loginpop {
+  display: inline-block;
+  z-index: 10000;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -60vw);
+          transform: translate(-50%, -60vw);
+  border-radius: 20px;
+  height: 400px;
+  width: 500px;
+  overflow: hidden;
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
+  opacity: 0;
+}
+
+.loginpop h2 {
+  color: var(--p-color);
+  margin: 20px 0;
+  opacity: 0;
+  -webkit-transition: 0.4s ease-in;
+  transition: 0.4s ease-in;
+  font-size: 2em;
+}
+
+.loginpop form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  opacity: 0;
+  -webkit-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
+  width: 80%;
+}
+
+.loginpop label {
+  left: 0;
+  color: var(--s-color);
+}
+
+.loginpop input {
+  -webkit-box-shadow: 2px 2px 6px 3px rgba(0, 0, 0, 0.12);
+  box-shadow: 2px 2px 6px 3px rgba(0, 0, 0, 0.12);
+  width: 100%;
+  padding: 10px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.loginpop input:last-of-type {
+  background-color: var(--s-color);
+  color: var(--p-color);
+  padding: 10px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.loginpop input:last-of-type:hover {
+  background-color: #f0f0f0;
+}
+
+.loginpop #cadastrar {
+  width: 80%;
+  position: absolute;
+  height: 100%;
+  float: left;
+  background-color: var(--p-color);
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform: translateX(-70%);
+          transform: translateX(-70%);
+}
+
+.loginpop #cadastrar h2 {
+  color: var(--s-color);
+}
+
+.loginpop #cadastrar form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  opacity: 0;
+  -webkit-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
+}
+
+.loginpop #cadastrar.active {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.loginpop #cadastrar.active h2 {
+  opacity: 1;
+}
+
+.loginpop #cadastrar.active form {
+  opacity: 1;
+}
+
+.loginpop #entrar {
+  width: 80%;
+  height: 100%;
+  float: right;
+  background-color: var(--s-color);
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
+  -webkit-transform: translateX(73%);
+          transform: translateX(73%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.loginpop #entrar h2 {
+  color: var(--p-color);
+}
+
+.loginpop #entrar label {
+  color: var(--p-color);
+}
+
+.loginpop #entrar.active {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.loginpop #entrar.active h2 {
+  opacity: 1;
+}
+
+.loginpop #entrar.active form {
+  opacity: 1;
+}
+
+.loginpop #slider {
+  z-index: inherit;
+  position: fixed;
+  margin-left: 7%;
+  width: 88%;
+  height: 30px;
+  border-radius: 30px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  bottom: 20px;
+  cursor: pointer;
+  background-color: var(--s-color);
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
+}
+
+.loginpop #slider .select {
+  position: absolute;
+  margin: 0 2px;
+  margin-top: 1px;
+  border-radius: 25px;
+  height: 28px;
+  width: 75px;
+  background-color: var(--p-color);
+  color: var(--s-color);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: 1.5s ease-in-out;
+  transition: 1.5s ease-in-out;
+  right: 0;
+}
+
+.loginpop #slider.active {
+  background-color: var(--p-color);
+  width: 63px;
+}
+
+.loginpop #slider.active .select {
+  background-color: var(--s-color);
+  color: var(--p-color);
+}
+
+.loginpop.active {
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  opacity: 1;
+}
+
+#overlay {
+  z-index: 10;
+  position: fixed;
+  opacity: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+}
+
+#overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
 .esquerda {
   float: left;
 }

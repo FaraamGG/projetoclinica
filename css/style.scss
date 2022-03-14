@@ -208,6 +208,235 @@ header { /* Cabeçario */
     }
 }
 
+.loginpop {
+
+    display: inline-block;
+    z-index: 10000;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -60vw);
+    border-radius: 20px;
+    height: 400px;
+    width: 500px;
+    overflow: hidden;
+    transition: 1s ease-in-out;
+    opacity: 0;
+
+
+    h2 {
+        color: var(--p-color);
+        margin: 20px 0;
+        opacity: 0;
+        transition: 0.4s ease-in;
+        font-size: 2em;
+    }
+
+    form {
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        opacity: 0;
+        transition: 0.4s ease-in-out;
+        width: 80%;
+    }
+
+    label {
+        left: 0;
+        color: var(--s-color);
+    }
+
+    input {
+        -webkit-box-shadow: 2px 2px 6px 3px rgba(0,0,0,0.12); 
+        box-shadow: 2px 2px 6px 3px rgba(0,0,0,0.12);
+        width: 100%;
+
+        padding: 10px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+
+        &:last-of-type {
+            background-color: var(--s-color);
+            color: var(--p-color);
+            padding: 10px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+
+            &:hover {
+                background-color: rgba(240, 240, 240, 1);
+            }
+
+        }
+    }
+    
+    #cadastrar {
+        width: 80%;
+        position: absolute;
+        height: 100%;
+        float: left;
+        
+        background-color: var(--p-color);
+        transition: 1s ease-in-out;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transform: translateX(-70%);
+
+        h2 {
+
+            color: var(--s-color);
+            
+        }
+
+        form {
+           
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            opacity: 0;
+            transition: 0.4s ease-in-out;
+            
+        }
+
+        &.active {
+            transform: translateX(0);
+            
+            h2 {
+                opacity: 1;
+                
+            }
+
+            form {
+                opacity: 1;
+
+            }
+
+        }
+
+    }
+    
+    #entrar {
+        width: 80%;
+        height: 100%;
+        float: right;
+        background-color: var(--s-color);
+        transition: 1s ease-in-out;
+        transform: translateX(73%);
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h2  {
+            color: var(--p-color);
+        }
+
+        label {
+            color: var(--p-color);
+        }
+        
+
+        &.active {
+            transform: translateX(0);
+
+            h2 {
+                opacity: 1;
+                
+            }
+
+            form {
+                opacity: 1;
+
+            }
+        }
+    }
+
+
+    #slider {
+        z-index: inherit;
+        position: fixed;
+        margin-left: 7%;
+        width: 88%;
+        height: 30px;
+        border-radius: 30px;
+        user-select: none;
+        bottom: 20px;
+        cursor: pointer;
+        background-color: var(--s-color);
+        transition: 1s ease-in-out;
+
+        .select {
+
+            position: absolute;
+            margin: 0 2px;
+            
+            margin-top: 1px;
+            border-radius: 25px;
+            height: 28px;
+            width: 75px;
+            background-color: var(--p-color);
+            color: var(--s-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: 1.5s ease-in-out;
+            right: 0;
+            
+        }
+
+        &.active {
+
+            background-color: var(--p-color);
+            width: 63px;
+            
+            
+            .select {
+                background-color: var(--s-color);
+                color: var(--p-color);
+                
+                
+                
+            }
+
+        }
+
+    }
+
+    &.active {
+        
+        transform: translate(-50%, -50%);
+        opacity: 1;
+    }
+
+
+}
+
+#overlay {
+    z-index: 10;
+    position: fixed;
+    opacity: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+
+    &.active{
+        opacity: 1;
+        pointer-events: all;
+    }
+
+}
+
+
 
 .esquerda {
     float: left;
