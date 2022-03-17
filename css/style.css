@@ -127,6 +127,20 @@ header .container .nav .consultar-buttom a {
   color: var(--p-color);
 }
 
+body::-webkit-scrollbar{
+  width: 12px;
+}
+
+body::-webkit-scrollbar-track{
+  background: #d80027
+}
+
+body::-webkit-scrollbar-thumb{
+  background-color: #fff;
+  border-radius: 10px;
+  border: 2px solid #d80027;
+}
+
 .slide {
   height: 600px;
   background-color: var(--p-color);
