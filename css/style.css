@@ -11,6 +11,7 @@
 }
 
 * {
+  box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
@@ -482,3 +483,39 @@ body::-webkit-scrollbar-thumb{
   float: right;
 }
 /*# sourceMappingURL=style.css.map */
+
+.cont{
+  background:#E95258;
+}
+
+/*ConfiguracaoECoresDoNomeNaAreaNome*/
+.inpcontN{
+
+
+  display: flex;
+  flex-direction: column;
+  align-items:flex-start;
+
+}
+  p{
+    font-size: 24px;
+    color: #f8f8f8; 
+  }
+
+#inpN{
+  border-radius: 7px;
+  height: 30px;
+  font-size: 14px;
+  margin-right:250px;
+  margin-top: 200px;  
+  width: 250px;
+  float: left;
+}
+#inpN2{
+  border-radius: 7px;
+  height: 30px;
+  font-size: 14px;
+
+  width: 250px;
+  float: right;
+}

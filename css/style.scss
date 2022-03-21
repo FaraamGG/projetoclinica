@@ -113,6 +113,20 @@ header { /* Cabeçario */
     
 }
 
+body::-webkit-scrollbar{
+    width: 12px;
+  }
+  
+  body::-webkit-scrollbar-track{
+    background: #d80027
+  }
+  
+  body::-webkit-scrollbar-thumb{
+    background-color: #fff;
+    border-radius: 10px;
+    border: 2px solid #d80027;
+  }
+
 .slide {
     height: 600px;
     background-color: var(--p-color);
@@ -444,4 +458,11 @@ header { /* Cabeçario */
 
 .direita {
     float: right;
+}
+
+.contact{
+    display: flex;
+    justify-content: right;
+    align-items: right;
+
 }
