@@ -7,6 +7,10 @@ const entrar = document.getElementById('entrar')
 const cadastrar = document.getElementById('cadastrar')
 const logtext = document.getElementById('logtext')
 
+const toggle = document.getElementById('nav_toggle')
+const nav = document.querySelector('.nav')
+
+
 openPop.forEach(div => {
     div.addEventListener('click', () => {
         const popup = document.querySelector(div.dataset.popTarget)
@@ -19,6 +23,12 @@ overlay.addEventListener('click', () => {
     popup.forEach(popup => {
         closePopup(popup)
     })
+    if(nav.classList.contains('active')) {
+        nav.classList.remove('active')
+        toggle.classList.remove('off')
+        overlay.classList.remove('active')
+        return
+    }
 })
 
 function openPopup(popup) {
@@ -45,4 +55,19 @@ slider.addEventListener('click', () => {
     cadastrar.classList.remove('active')
     entrar.classList.add('active')
     logtext.innerHTML = "Cadastro";
+})
+
+toggle.addEventListener('click', () => {
+
+    if(nav.classList.contains('active')) {
+        nav.classList.remove('active')
+        toggle.classList.remove('off')
+        overlay.classList.remove('active')
+        return
+    }
+    overlay.classList.add('active')
+    toggle.classList.add('off')
+    nav.classList.add('active')
+
+
 })

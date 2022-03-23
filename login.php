@@ -26,7 +26,7 @@ if (isset($_POST['cpf'])) { //checa se existe algum post
 
         } else {
 
-            mysqli_stmt_bind_param($stmt, "sss", $nome, $cpf, $senha);
+            mysqli_stmt_bind_param($stmt, "sss", filter_var($nome, FILTER_SANITIZE_SPECIAL_CHARS), $cpf, $senha);
 
             mysqli_stmt_execute($stmt);
 
