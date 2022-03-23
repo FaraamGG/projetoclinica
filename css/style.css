@@ -481,7 +481,7 @@ body::-webkit-scrollbar-thumb{
   right: 0;
   top: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: #00000080;
   pointer-events: none;
 }
 
@@ -500,17 +500,23 @@ body::-webkit-scrollbar-thumb{
 /*# sourceMappingURL=style.css.map */
 
 .cont{
-  background:#E95258;
+  background:#d80027;
+}
+
+.contat{
+  display: flex;
+  justify-content: right;
+  margin-right: 250px;
 }
 
 /*ConfiguracaoECoresDoNomeNaAreaNome*/
 .inpcontN{
-
-
-  display: flex;
-  flex-direction: column;
-  align-items:flex-start;
-
+  justify-content: center;
+  align-items: center;
+  margin: 200px;
+  height: 35px;
+  width: 440px;
+  
 }
   p{
     font-size: 24px;
@@ -518,21 +524,16 @@ body::-webkit-scrollbar-thumb{
   }
 
 #inpN{
-  border-radius: 7px;
-  height: 30px;
-  font-size: 14px;
-  margin-right:250px;
-  margin-top: 200px;  
-  width: 250px;
-  float: left;
+  border-radius: 5px;
+  padding: 10px;
+  width: 200px;
+  margin: 0 5px;
 }
-#inpN2{
-  border-radius: 7px;
-  height: 30px;
-  font-size: 14px;
 
-  width: 250px;
-  float: right;
+#inpN2{
+  border-radius: 5px;
+  padding: 10px;
+  width: 200px;
 }
 
 

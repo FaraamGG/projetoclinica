@@ -11,7 +11,6 @@ const input_log = document.querySelector('#cpf_log');
     }else if(inputleigth === 11){
       item.value += '-'
     } 
-
   })
 
 })
